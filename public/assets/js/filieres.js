@@ -13,7 +13,7 @@ const renderFiliere = (data, filiere) => {
 
     document.getElementById("svg2").innerHTML = "";
     var svg = d3.select("#svg2").append("svg")
-        .attr("viewBox", `0 0 ${WIDTH + margin.left + margin.right} ${HEIGHTp + margin.top + margin.bottom}`)
+        .attr("viewBox", `0 0 ${WIDTH + margin.left + margin.right} ${HEIGHT + margin.top + margin.bottom}`)
         .append("g");
 
     let y = d3.scaleLinear().range([HEIGHT, 0]);
