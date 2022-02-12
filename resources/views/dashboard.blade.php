@@ -37,6 +37,32 @@
                 </div>
             </div>
         </div>
+        <div class="row my-5">
+            <div class="col-xl-12 mb-5 mb-xl-0">
+                <div class="card bg-gradient-default shadow">
+                    <div class="card-header bg-transparent">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase text-light ls-1 mb-1">Overview</h6>
+                                <h2 class="text-white mb-0">Sales value</h2>
+                            </div>
+                            <div class="col">
+                                <select name="filiere" id="filiereSelect">
+                                    <option value="GM">GM</option>
+                                    <option value="GI">GI</option>
+                                    <option value="GEM">GEM</option>
+                                    <option value="IAGI">IAGI</option>
+                                    <option value="MSEI">MSEI</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='svg2' class="card-body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row mt-5">
             <div class="col-xl-8 mb-5 mb-xl-0">
                 <div class="card shadow">
@@ -267,6 +293,8 @@
     <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.extension.js"></script>
     <script>
         var data = @json($avgData);
+        var dataFiliere = @json($avgFiliere);
     </script>
     <script src={{asset('assets/js/script.js')}}></script>
+    <script src={{asset('assets/js/filieres.js')}}></script>
 @endpush

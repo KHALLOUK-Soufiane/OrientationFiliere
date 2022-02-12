@@ -1,17 +1,19 @@
-const svgk = document.getElementById("svg1")
-var margin = { top: 30, right: 50, bottom: 130, left: 30 };
-const filieres = ['GM', 'IAGI', 'MSEI', 'GI', 'GEM'];
-const WIDTH = 1200;
-const HEIGHT = 300;
+const svgk2 = document.getElementById("svg2")
 
-const round = (number, decimalPlaces) => {
-    const factorOfTen = Math.pow(10, decimalPlaces)
-    return Math.round(number * factorOfTen) / factorOfTen
-}
+const renderFiliere = (data, filiere) => {
+    workingData = JSON.parse(data[filiere])[0]
+    newData = [];
+    for (const key in workingData) {
+        newData.push(`{"matiere" : "${key}", "note" : ${round(workingData[key], 2)}}`);
+    }
+    data = [];
+    newData.forEach(object => {
+        data.push(JSON.parse(object));
+    });
 
-const render = data => {
-    var svg = d3.select("#svg1").append("svg")
-        .attr("viewBox", `0 0 ${WIDTH + margin.left + margin.right} ${HEIGHT + margin.top + margin.bottom}`)
+    document.getElementById("svg2").innerHTML = "";
+    var svg = d3.select("#svg2").append("svg")
+        .attr("viewBox", `0 0 ${WIDTH + margin.left + margin.right} ${HEIGHTp + margin.top + margin.bottom}`)
         .append("g");
 
     let y = d3.scaleLinear().range([HEIGHT, 0]);
@@ -84,3 +86,28 @@ const render = data => {
         .style("opacity", 1);
 
 };
+
+window.onload = () => {
+    data = JSON.parse(data)[0]
+    dataGM = JSON.parse(dataFiliere.GM)[0];
+    dataGI = JSON.parse(dataFiliere.GI)[0];
+    dataGEM = JSON.parse(dataFiliere.GEM)[0];
+    dataIAGI = JSON.parse(dataFiliere.IAGI)[0];
+    dataMSEI = JSON.parse(dataFiliere.MSEI)[0];
+
+    newData = [];
+    for (const key in data) {
+        newData.push(`{"matiere" : "${key}", "note" : ${round(data[key], 2)}}`);
+    }
+    data = [];
+    newData.forEach(object => {
+        data.push(JSON.parse(object));
+    });
+    render(data);
+    renderFiliere(dataFiliere, "GM");
+}
+
+let select = document.getElementById('filiereSelect');
+select.addEventListener('change', () => {
+    renderFiliere(dataFiliere, select.value);
+})
