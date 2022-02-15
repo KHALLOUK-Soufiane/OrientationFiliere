@@ -279,6 +279,8 @@
     <script>
         var data = @json($avgData);
         var dataFiliere = @json($avgFiliere);
+        var minFiliere = @json($minFiliere);
+        var maxFiliere = @json($maxFiliere);
     </script>
     <script src={{asset('assets/js/script.js')}}></script>
     <script src={{asset('assets/js/filieres.js')}}></script>
