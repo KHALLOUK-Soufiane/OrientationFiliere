@@ -66,85 +66,34 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">Page name</th>
-                                    <th scope="col">Visitors</th>
-                                    <th scope="col">Unique users</th>
-                                    <th scope="col">Bounce rate</th>
+                                    <th scope="col">Matiere</th>
+                                    <th scope="col">Min</th>
+                                    <th scope="col">Max</th>
+                                    <th scope="col">Note Etudiant</th>
                                 </tr>
                             </thead>
+                            <form id="studentNotesForm">
                             <tbody>
+                                @foreach(json_decode($maxFiliere['GM'])[0] as $key => $value)
                                 <tr>
                                     <th scope="row">
-                                        /argon/
+                                        {{$key}}
                                     </th>
                                     <td>
-                                        4,569
+                                        {{((array)json_decode($minFiliere['GM'])[0])[$key]}}
                                     </td>
                                     <td>
-                                        340
+                                        {{$value}}
                                     </td>
                                     <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 46,53%
+                                        <input type="number" step="any" name="{{$key}}" required>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/index.html
-                                    </th>
-                                    <td>
-                                        3,985
-                                    </td>
-                                    <td>
-                                        319
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 46,53%
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/charts.html
-                                    </th>
-                                    <td>
-                                        3,513
-                                    </td>
-                                    <td>
-                                        294
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 36,49%
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/tables.html
-                                    </th>
-                                    <td>
-                                        2,050
-                                    </td>
-                                    <td>
-                                        147
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 50,87%
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/profile.html
-                                    </th>
-                                    <td>
-                                        1,795
-                                    </td>
-                                    <td>
-                                        190
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
-                                    </td>
-                                </tr>
+                                @endforeach
                             </tbody>
+                            </form>
                         </table>
+                        <input type="submit" value="Submit" form="studentNotesForm">
                     </div>
                 </div>
             </div>
@@ -273,6 +222,7 @@
 @endsection
 
 @push('js')
+<script src={{asset('assets/js/jquery.js')}}></script>
 <script src={{asset('assets/js/d3.min.js')}}></script>
     <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.min.js"></script>
     <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.extension.js"></script>
@@ -284,4 +234,5 @@
     </script>
     <script src={{asset('assets/js/script.js')}}></script>
     <script src={{asset('assets/js/filieres.js')}}></script>
+    <script src={{asset('assets/js/studentNotesForm.js')}}></script>
 @endpush
