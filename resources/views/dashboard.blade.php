@@ -61,14 +61,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-responsive">
+                    <div class="table-responsive text-center">
                         <!-- Projects table -->
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">Matiere</th>
-                                    <th scope="col">Min</th>
-                                    <th scope="col">Max</th>
+                                    <th scope="col">Note Minimale</th>
+                                    <th scope="col">Note Maximale</th>
                                     <th scope="col">Note Etudiant</th>
                                 </tr>
                             </thead>
@@ -93,7 +93,7 @@
                             </tbody>
                             </form>
                         </table>
-                        <input type="submit" value="Submit" form="studentNotesForm">
+                            <input class="btn btn-primary" type="submit" value="Submit" form="studentNotesForm">
                     </div>
                 </div>
             </div>

@@ -79,7 +79,7 @@ const renderFiliere = (data, filiere) => {
         .attr("y", (d) => y(d.note) - 5)
         .attr("text-anchor", "middle")
         .style("font-size", "12")
-        .style("color", "white")
+        .style("fill", "white")
         // Add animation to the labels
         .transition()
         .duration(500)
