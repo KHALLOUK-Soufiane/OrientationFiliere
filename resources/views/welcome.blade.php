@@ -6,7 +6,9 @@
             <div class="header-body text-center mt-7 mb-7">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 col-md-6">
-                        <h1 class="text-white">{{ __("Bonjour dans notre application pour l'orientation scolaire ") }}</h1>
+                        <h1 class="text-white">{{ __("Bonjour dans notre application pour l'orientation scolaire GuideMe ") }}</h1>
+                        <img style="width:50%;display:block;margin-left:auto;margin-right:auto" src="{{ asset("assets/img/brand/white.png") }}">
+
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@
                         <div class="row align-items-center">
                             <div class="col">
                                 <h6 class="text-uppercase text-light ls-1 mb-1">Graphe de moyennes</h6>
-                                <h2 class="text-white mb-0">IAGI </h2>
+                                <h2 class="text-white mb-0">Notes des étudiants de toute les filières </h2>
                             </div>
                             
                         </div>
