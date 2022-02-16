@@ -2,7 +2,6 @@
 
 @section('content')
     @include('layouts.headers.cards')
-    
     <div class="container-fluid mt--7">
         <div class="row">
             <div class="col-xl-12 mb-5 mb-xl-0">
@@ -32,7 +31,7 @@
                                 <h2 class="text-white mb-0">Filiere</h2>
                             </div>
                             <div class="col">
-                                <select name="filiere" id="filiereSelect">
+                                <select class="btn btn-danger" name="filiere" id="filiereSelect">
                                     <option value="GM">GM</option>
                                     <option value="GI">GI</option>
                                     <option value="GEM">GEM</option>
@@ -50,21 +49,19 @@
         </div>
         <div class="row mt-5">
             <div class="col-xl-8 mb-5 mb-xl-0">
-                <div class="card shadow">
-                    <div class="card-header border-0">
+                <div class="card bg-default shadow">
+                    <div class="card-header bg-transparent border-0">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h3 class="mb-0">Page visits</h3>
+                                <h3 class="text-white mb-0">Testez vos notes</h3>
                             </div>
-                            <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
-                            </div>
+                           
                         </div>
                     </div>
                     <div class="table-responsive text-center">
                         <!-- Projects table -->
-                        <table class="table align-items-center table-flush">
-                            <thead class="thead-light">
+                        <table class="table align-items-center table-dark table-flush">
+                            <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">Matiere</th>
                                     <th scope="col">Note Minimale</th>
@@ -97,123 +94,45 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4">
+            <div class="col-xl-4 text-center">
                 <div class="card shadow">
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h3 class="mb-0">Social traffic</h3>
+                                <h3 class="mb-0">LA NOTE GENERALE </h3>
                             </div>
-                            <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
-                            </div>
+                          
                         </div>
                     </div>
-                    <div class="table-responsive">
+                    <div class="table-responsive ">
                         <!-- Projects table -->
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">Referral</th>
-                                    <th scope="col">Visitors</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">Moyenne <br>de la <br>filiere</th>
+                                    <th scope="col">Votre<br> Note</th>
+                                    <th scope="col-6"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">
-                                        Facebook
-                                    </th>
-                                    <td>
-                                        1,480
+                                    <td >
+                                        15.45
                                     </td>
                                     <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">60%</span>
-                                            <div>
-                                                <div class="progress">
-                                                <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        13,33
+                                    </td>
+                                    <td>
+                                       
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Facebook
-                                    </th>
-                                    <td>
-                                        5,480
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">70%</span>
-                                            <div>
-                                                <div class="progress">
-                                                <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Google
-                                    </th>
-                                    <td>
-                                        4,807
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">80%</span>
-                                            <div>
-                                                <div class="progress">
-                                                <div class="progress-bar bg-gradient-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Instagram
-                                    </th>
-                                    <td>
-                                        3,678
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">75%</span>
-                                            <div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        twitter
-                                    </th>
-                                    <td>
-                                        2,645
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">30%</span>
-                                            <div>
-                                                <div class="progress">
-                                                <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
+                                
                             </tbody>
                         </table>
                     </div>
                 </div>
+                <p>Votre note est inférieure à la moyenne des notes dans cette filière.
+
             </div>
         </div>
 
