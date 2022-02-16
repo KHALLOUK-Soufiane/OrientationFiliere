@@ -87,41 +87,7 @@ const renderFiliere = (data, filiere) => {
 
 };
 
-window.onload = () => {
-    data = JSON.parse(data)[0]
-    dataGM = JSON.parse(dataFiliere.GM)[0];
-    dataGI = JSON.parse(dataFiliere.GI)[0];
-    dataGEM = JSON.parse(dataFiliere.GEM)[0];
-    dataIAGI = JSON.parse(dataFiliere.IAGI)[0];
-    dataMSEI = JSON.parse(dataFiliere.MSEI)[0];
 
-    minGM = JSON.parse(minFiliere.GM)[0];
-    minGI = JSON.parse(minFiliere.GI)[0];
-    minGEM = JSON.parse(minFiliere.GEM)[0];
-    minIAGI = JSON.parse(minFiliere.IAGI)[0];
-    minMSEI = JSON.parse(minFiliere.MSEI)[0];
-
-    maxGM = JSON.parse(maxFiliere.GM)[0];
-    maxGI = JSON.parse(maxFiliere.GI)[0];
-    maxGEM = JSON.parse(maxFiliere.GEM)[0];
-    maxIAGI = JSON.parse(maxFiliere.IAGI)[0];
-    maxMSEI = JSON.parse(maxFiliere.MSEI)[0];
-
-    console.log(minGM)
-    console.log(maxGM)
-
-
-    newData = [];
-    for (const key in data) {
-        newData.push(`{"matiere" : "${key}", "note" : ${round(data[key], 2)}}`);
-    }
-    data = [];
-    newData.forEach(object => {
-        data.push(JSON.parse(object));
-    });
-    render(data);
-    renderFiliere(dataFiliere, "GM");
-}
 
 let select = document.getElementById('filiereSelect');
 select.addEventListener('change', () => {
