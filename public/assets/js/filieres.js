@@ -60,7 +60,7 @@ const renderFiliere = (data, filiere) => {
     bars
         .append("rect")
         .attr("class", "bar")
-        .attr("x", (d) => x(d.matiere))
+        .attr("x", (d) => x(d.matiere)+5)
         .attr("y", (d) => y(0))
         .attr("width", x.bandwidth()-10)
         .attr("height", 0)

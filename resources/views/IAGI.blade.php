@@ -21,17 +21,6 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-xl-8 mb-5 mb-xl-0">
-                <div class="card bg-default shadow">
-                    <div class="card-header bg-transparent border-0">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h3 class="text-white mb-0">Testez vos notes</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="col-xl-4 text-center">
                 <div class="card shadow">
                     <div class="card-header border-0">
@@ -39,7 +28,6 @@
                             <div class="col">
                                 <h3 class="mb-0">LA NOTE GENERALE </h3>
                             </div>
-                          
                         </div>
                     </div>
                     <div class="table-responsive ">
