@@ -64,7 +64,7 @@
                                 </tbody>
                             </form>
                         </table>
-                            <button class="btn btn-primary" type="submit" form="studentNotesForm"><a href="#top">*</a>Submit</button>
+                            <button id="sub"class="btn btn-primary" type="submit" form="studentNotesForm">Submit</button>
                     </div>
                 </div>
             </div>
@@ -120,6 +120,11 @@
         var minFiliere = @json($minFiliere);
         var maxFiliere = @json($maxFiliere);
         var fil = undefined;
+        $("#sub").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#top").offset().top
+    }, 500);
+});
     </script>
     <script src={{asset('assets/js/script.js')}}></script>
     <!-- <script src={{asset('assets/js/filieres.js')}}></script> -->
