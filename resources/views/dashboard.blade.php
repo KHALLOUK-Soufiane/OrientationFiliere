@@ -83,24 +83,19 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">Moyenne <br>de la <br>filiere</th>
-                                    <th scope="col">Votre<br> Note</th>
-                                    <th scope="col-6"></th>
+                                    <th scope="col">Moyenne Generale <br>des etudiants</th>
+                                    <th scope="col">Votre<br> Note Moyenne</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td >
-                                        15.45
+                                    <td id="noteFiliere">
+                                        
                                     </td>
-                                    <td>
-                                        13,33
-                                    </td>
-                                    <td>
-                                       
+                                    <td id="noteEtudiant">
+                                        Pas Encore Calcule
                                     </td>
                                 </tr>
-                                
                             </tbody>
                         </table>
                     </div>

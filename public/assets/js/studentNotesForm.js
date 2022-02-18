@@ -40,6 +40,14 @@ const renderStudentData = (data) => {
         .y(function(d) { return y(d.value) })
         );
     }
+    let avg = 0;
+    let count = 0;
+    data.forEach(item => {
+        avg = avg + item.value;
+        count = count + 1;
+    })
+    avg = avg / count;
+    $('#noteEtudiant').html(round(avg, 2));
 }
 
 if ($('#studentNotesForm').length){

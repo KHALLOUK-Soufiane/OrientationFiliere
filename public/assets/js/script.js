@@ -84,4 +84,13 @@ const render = data => {
         .duration(500)
         .style("opacity", 1);
 
+    let avg = 0;
+    let count = 0;
+    data.forEach(item => {
+        avg = avg + item.note;
+        count = count + 1;
+    })
+    avg = avg / count;
+    console.log(avg, count)
+    $('#noteFiliere').html(round(avg, 2));
 };

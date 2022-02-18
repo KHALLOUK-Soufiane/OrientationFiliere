@@ -12,6 +12,8 @@
                                 <h6 class="text-uppercase text-light ls-1 mb-1">Moyennes de notes</h6>
                                 <h2 class="text-white mb-0">IAGI</h2>
                             </div>
+                        </div>
+                    </div>
                     <div id='svg2' class="card-body">
                         
                     </div>
@@ -26,7 +28,6 @@
                             <div class="col">
                                 <h3 class="text-white mb-0">Testez vos notes</h3>
                             </div>
-                           
                         </div>
                     </div>
                 </div>
@@ -46,30 +47,23 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">Moyenne <br>de la <br>filiere</th>
-                                    <th scope="col">Votre<br> Note</th>
-                                    <th scope="col-6"></th>
+                                    <th scope="col">Moyenne Generale <br>du filiere</th>
+                                    <th scope="col">Votre<br> Note Moyenne</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td >
-                                        15.45
+                                    <td id="noteFiliere">
+                                        
                                     </td>
-                                    <td>
-                                        13,33
-                                    </td>
-                                    <td>
-                                       
+                                    <td id="noteEtudiant">
+                                        Pas Encore Calcule
                                     </td>
                                 </tr>
-                                
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <p>Votre note est inférieure à la moyenne des notes dans cette filière.</p>
-
             </div>
         </div>
 
