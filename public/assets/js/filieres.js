@@ -105,7 +105,7 @@ $(function(){
        $('#noteEtudiant').css("font-weight","bold")
        $('#note1').after("<p style='color:green;font-weight:bold'>Génial ! Votre note est supérieure à la moyenne des notes dans cette filière.</p>")
     }
-    else
+    else if($('#noteFiliere').html() < $('#noteEtudiant').html())
     {
        $('#noteEtudiant').css("color","red")
        $('#noteEtudiant').css("font-weight","bold")
