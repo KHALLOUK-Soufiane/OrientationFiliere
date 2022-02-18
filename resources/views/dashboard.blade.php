@@ -44,24 +44,24 @@
                                 </tr>
                             </thead>
                             <form id="studentNotesForm" method="post">
-                            <tbody>
-                                @foreach(json_decode($maxFiliere['GM'])[0] as $key => $value)
-                                <tr>
-                                    <th scope="row">
-                                        {{$key}}
-                                    </th>
-                                    <td>
-                                        {{((array)json_decode($minFiliere['GM'])[0])[$key]}}
-                                    </td>
-                                    <td>
-                                        {{$value}}
-                                    </td>
-                                    <td>
-                                        <input type="number" step="any" name="{{$key}}" required>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
+                                <tbody>
+                                    @foreach(json_decode($maxFiliere['GM'])[0] as $key => $value)
+                                    <tr>
+                                        <th scope="row">
+                                            {{$key}}
+                                        </th>
+                                        <td>
+                                            {{((array)json_decode($minFiliere['GM'])[0])[$key]}}
+                                        </td>
+                                        <td>
+                                            {{$value}}
+                                        </td>
+                                        <td>
+                                            <input type="number" step="any" name="{{$key}}" required>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
                             </form>
                         </table>
                             <input class="btn btn-primary" type="submit" value="Submit" form="studentNotesForm">

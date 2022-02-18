@@ -1,4 +1,5 @@
 const svgk2 = document.getElementById("svg2")
+let SVG2 = undefined;
 
 const renderFiliere = (data, filiere) => {
     workingData = JSON.parse(data[filiere])[0]
@@ -12,7 +13,7 @@ const renderFiliere = (data, filiere) => {
     });
     
     document.getElementById("svg2").innerHTML = "";
-    var svg = d3.select("#svg2").append("svg")
+    SVG2 = d3.select("#svg2").append("svg")
         .attr("viewBox", `0 0 ${WIDTH + margin.left + margin.right} ${HEIGHT + margin.top + margin.bottom}`)
         .append("g");
 
@@ -21,11 +22,11 @@ const renderFiliere = (data, filiere) => {
 
     y.domain([0,20]).nice();
 
-    svg.append("g").call(d3.axisLeft(y));
+    SVG2.append("g").call(d3.axisLeft(y));
 
     x.domain(data.map((data) => data.matiere));
 
-    const text = svg
+    const text = SVG2
         .append("g")
         .attr("transform", `translate(0, ${HEIGHT})`)
         .call(d3.axisBottom(x));
@@ -46,7 +47,7 @@ const renderFiliere = (data, filiere) => {
 
 
     //Create Bars
-    let bars = svg
+    let bars = SVG2
         .selectAll(".bars")
         .data(data, (data) => data.matiere)
         .enter()

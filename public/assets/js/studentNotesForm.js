@@ -1,4 +1,5 @@
 const form = document.querySelector('#studentNotesForm');
+let studentData = JSON.parse(localStorage.getItem('studentData'));
 
 const renderStudentData = (data) => {
     data.forEach((d) => {
@@ -13,26 +14,44 @@ const renderStudentData = (data) => {
 
     x.domain(data.map((data) => data.name));
 
-    SVG1.append("path")
-    .datum(data)
-    .attr("fill", "none")
-    .attr("stroke", "red")
-    .attr("d", d3.line()
-    .x(function(d) { return x(d.name) + x.bandwidth()/2})
-    .y(function(d) { return y(d.value) })
-    );
+    if($('#svg1 svg g path[stroke="red"]').length){
+        $('#svg1 svg g path[stroke="red"]').remove();
+    }
+
+    if($('#svg2 svg g path[stroke="red"]').length){
+        $('#svg2 svg g path[stroke="red"]').remove();
+    }
+    if (typeof SVG1 !== 'undefined') {
+        SVG1.append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", "red")
+        .attr("d", d3.line()
+        .x(function(d) { return x(d.name) + x.bandwidth()/2})
+        .y(function(d) { return y(d.value) })
+        );
+    }else if(typeof SVG2 !== 'undefined'){
+        SVG2.append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", "red")
+        .attr("d", d3.line()
+        .x(function(d) { return x(d.name) + x.bandwidth()/2})
+        .y(function(d) { return y(d.value) })
+        );
+    }
 }
 
 if ($('#studentNotesForm').length){
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        let studentData = $(form).serializeArray();
+        studentData = $(form).serializeArray();
+        localStorage.setItem('studentData', JSON.stringify(studentData));
         renderStudentData(studentData);
     });
 }
 
 window.onload = () => {
-    
     if(typeof data !== 'undefined'){
         data = JSON.parse(data)[0]
         newData = [];
@@ -65,5 +84,12 @@ window.onload = () => {
         dataIAGI = JSON.parse(dataFiliere.IAGI)[0];
         dataMSEI = JSON.parse(dataFiliere.MSEI)[0];
         renderFiliere(dataFiliere, fil);
+    }
+
+    if (studentData !== null) {
+        studentData.forEach(item => {
+            $('input[name="'+item.name+'"]').val(item.value);
+        })
+        renderStudentData(studentData);
     }
 }
