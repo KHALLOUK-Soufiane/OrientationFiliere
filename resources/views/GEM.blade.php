@@ -20,9 +20,9 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5 d-flex justify-content-center" >
             <div class="col-xl-4 text-center">
-                <div class="card shadow">
+                <div id="note1" class="card shadow">
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col">

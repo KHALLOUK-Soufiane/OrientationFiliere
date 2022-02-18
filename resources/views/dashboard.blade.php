@@ -10,7 +10,7 @@
                         <div class="row align-items-center">
                             <div class="col">
                                 <h6 class="text-uppercase text-light ls-1 mb-1">Graphe de moyennes</h6>
-                                <h2 class="text-white mb-0">Notes des étudiants de toute les filières </h2>
+                                <h2 id="top" class="text-white mb-0">Notes des étudiants de toute les filières </h2>
                             </div>
                             
                         </div>
@@ -64,12 +64,12 @@
                                 </tbody>
                             </form>
                         </table>
-                            <input class="btn btn-primary" type="submit" value="Submit" form="studentNotesForm">
+                            <button class="btn btn-primary" type="submit" form="studentNotesForm"><a href="#top">*</a>Submit</button>
                     </div>
                 </div>
             </div>
             <div class="col-xl-4 text-center">
-                <div class="card shadow">
+                <div id="note1" class="card shadow">
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col">
