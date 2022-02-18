@@ -81,27 +81,27 @@
                     <div class="collapse hide" id="filieres">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="/iagi">
                                   <i class="ni ni-fat-add text-primary"></i> {{ __('IAGI') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">
+                              <a class="nav-link" href="/gm">
                                 <i class="ni ni-fat-add text-primary"></i>  {{ __('GM') }}
                               </a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="/gi">
                               <i class="ni ni-fat-add text-primary"></i> {{ __('GI') }}
                             </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">
+                          <a class="nav-link" href="/gem">
                             <i class="ni ni-fat-add text-primary"></i>  {{ __('GEM') }}
                           </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/msei">
                           <i class="ni ni-fat-add text-primary"></i>  {{ __('MSEI') }}
                         </a>
                     </li>

@@ -10,7 +10,7 @@ const renderFiliere = (data, filiere) => {
     newData.forEach(object => {
         data.push(JSON.parse(object));
     });
-
+    
     document.getElementById("svg2").innerHTML = "";
     var svg = d3.select("#svg2").append("svg")
         .attr("viewBox", `0 0 ${WIDTH + margin.left + margin.right} ${HEIGHT + margin.top + margin.bottom}`)
@@ -87,9 +87,7 @@ const renderFiliere = (data, filiere) => {
 
 };
 
-
-
-let select = document.getElementById('filiereSelect');
-select.addEventListener('change', () => {
-    renderFiliere(dataFiliere, select.value);
-})
+// let select = document.getElementById('filiereSelect');
+// select.addEventListener('change', () => {
+//     renderFiliere(dataFiliere, select.value);
+// })

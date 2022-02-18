@@ -3,20 +3,17 @@
 @section('content')
     @include('layouts.headers.cards')
     <div class="container-fluid mt--7">
-        <div class="row">
+        <div class="row my-5">
             <div class="col-xl-12 mb-5 mb-xl-0">
                 <div class="card bg-gradient-default shadow">
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="text-uppercase text-light ls-1 mb-1">Graphe de moyennes</h6>
-                                <h2 class="text-white mb-0">Notes des étudiants de toute les filières </h2>
+                                <h6 class="text-uppercase text-light ls-1 mb-1">Moyennes de notes</h6>
+                                <h2 class="text-white mb-0">GEM</h2>
                             </div>
-                            
-                        </div>
-                    </div>
-                    <div id='svg1' class="card-body">
-
+                    <div id='svg2' class="card-body">
+                        
                     </div>
                 </div>
             </div>
@@ -31,40 +28,6 @@
                             </div>
                            
                         </div>
-                    </div>
-                    <div class="table-responsive text-center">
-                        <!-- Projects table -->
-                        <table class="table align-items-center table-dark table-flush">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Matiere</th>
-                                    <th scope="col">Note Minimale</th>
-                                    <th scope="col">Note Maximale</th>
-                                    <th scope="col">Note Etudiant</th>
-                                </tr>
-                            </thead>
-                            <form id="studentNotesForm" method="post">
-                            <tbody>
-                                @foreach(json_decode($maxFiliere['GM'])[0] as $key => $value)
-                                <tr>
-                                    <th scope="row">
-                                        {{$key}}
-                                    </th>
-                                    <td>
-                                        {{((array)json_decode($minFiliere['GM'])[0])[$key]}}
-                                    </td>
-                                    <td>
-                                        {{$value}}
-                                    </td>
-                                    <td>
-                                        <input type="number" step="any" name="{{$key}}" required>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                            </form>
-                        </table>
-                            <input class="btn btn-primary" type="submit" value="Submit" form="studentNotesForm">
                     </div>
                 </div>
             </div>
@@ -120,13 +83,10 @@
     <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.min.js"></script>
     <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.extension.js"></script>
     <script>
-        var data = @json($avgData);
         var dataFiliere = @json($avgFiliere);
-        var minFiliere = @json($minFiliere);
-        var maxFiliere = @json($maxFiliere);
-        var fil = undefined;
+        const fil = 'GEM';
     </script>
     <script src={{asset('assets/js/script.js')}}></script>
-    <!-- <script src={{asset('assets/js/filieres.js')}}></script> -->
+    <script src={{asset('assets/js/filieres.js')}}></script>
     <script src={{asset('assets/js/studentNotesForm.js')}}></script>
 @endpush

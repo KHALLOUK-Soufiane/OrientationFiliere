@@ -3,6 +3,7 @@ var margin = { top: 30, right: 50, bottom: 130, left: 30 };
 const filieres = ['GM', 'IAGI', 'MSEI', 'GI', 'GEM'];
 const WIDTH = 1200;
 const HEIGHT = 300;
+let SVG1 = undefined;
 
 const round = (number, decimalPlaces) => {
     const factorOfTen = Math.pow(10, decimalPlaces)
@@ -10,7 +11,7 @@ const round = (number, decimalPlaces) => {
 }
 
 const render = data => {
-    var svg = d3.select("#svg1").append("svg")
+    SVG1 = d3.select("#svg1").append("svg")
         .attr("viewBox", `0 0 ${WIDTH + margin.left + margin.right} ${HEIGHT + margin.top + margin.bottom}`)
         .append("g");
 
@@ -19,11 +20,11 @@ const render = data => {
 
     y.domain([0,20]).nice();
 
-    svg.append("g").call(d3.axisLeft(y));
+    SVG1.append("g").call(d3.axisLeft(y));
 
     x.domain(data.map((data) => data.matiere));
 
-    const text = svg
+    const text = SVG1
         .append("g")
         .attr("transform", `translate(0, ${HEIGHT})`)
         .call(d3.axisBottom(x));
@@ -44,7 +45,7 @@ const render = data => {
 
 
     //Create Bars
-    let bars = svg
+    let bars = SVG1
         .selectAll(".bars")
         .data(data, (data) => data.matiere)
         .enter()

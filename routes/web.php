@@ -20,6 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/iagi', [App\Http\Controllers\HomeController::class, 'iagi'])->name('iagi');
+Route::get('/msei', [App\Http\Controllers\HomeController::class, 'msei'])->name('msei');
+Route::get('/gi', [App\Http\Controllers\HomeController::class, 'gi'])->name('gi');
+Route::get('/gm', [App\Http\Controllers\HomeController::class, 'gm'])->name('gm');
+Route::get('/gem', [App\Http\Controllers\HomeController::class, 'gem'])->name('gem');
 Auth::routes();
 
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
