@@ -100,7 +100,6 @@
                         </table>
                     </div>
                 </div>
-                {{-- <p>Votre note est inférieure à la moyenne des notes dans cette filière.</p> --}}
 
             </div>
         </div>
