@@ -98,7 +98,20 @@ const renderFiliere = (data, filiere) => {
    
 
 };
-
+$(function(){
+    if(parseFloat($('#noteFiliere').html()) < parseFloat($('#noteEtudiant').html()))
+    {
+       $('#noteEtudiant').css("color","green")
+       $('#noteEtudiant').css("font-weight","bold")
+       $('#note1').after("<p style='color:green;font-weight:bold'>Génial ! Votre note est supérieure à la moyenne des notes dans cette filière.</p>")
+    }
+    if(parseFloat($('#noteFiliere').html()) > parseFloat($('#noteEtudiant').html()))
+    {
+       $('#noteEtudiant').css("color","red")
+       $('#noteEtudiant').css("font-weight","bold")
+       $('#note1').after("<p style='color:red;font-weight:bold'>Malheureusement ! Votre note est inférieure à la moyenne des notes dans cette filière.</p>")
+    }    
+})
 
 // let select = document.getElementById('filiereSelect');
 // select.addEventListener('change', () => {
