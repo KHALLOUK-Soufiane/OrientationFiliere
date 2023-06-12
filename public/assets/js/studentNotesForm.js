@@ -49,14 +49,34 @@ const renderStudentData = (data) => {
         count = count + 1;
     })
     avg = avg / count;
+<<<<<<< Updated upstream
     $('#noteEtudiant').html(round(avg, 2));
+=======
+
+>>>>>>> Stashed changes
 }
 
 if ($('#studentNotesForm').length){
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         studentData = $(form).serializeArray();
+<<<<<<< Updated upstream
         localStorage.setItem('studentData', JSON.stringify(studentData));
+=======
+        let formData = new FormData();
+        let sentData = {};
+        studentData.forEach(object =>{
+            sentData[object.name] = [object.value];
+        })
+        console.log(sentData);
+        formData.append('json', JSON.stringify(sentData));
+        localStorage.setItem('studentData', JSON.stringify(studentData));
+        fetch('http://localhost:5000/', {
+                method: 'POST',
+                body: formData
+            })
+        .then(response => $('#noteEtudiant').html(response))
+>>>>>>> Stashed changes
         renderStudentData(studentData);
     });
 }
